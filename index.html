@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="style.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<title>Welcome</title>
+</head>
+
+<body>
+	<div class="slide-pane" id="pane">
+		<div class="content">
+			<div class="pane-links homes"><a href="">Home</a></div>
+			<div class="pane-links"><a href="courses">Courses</a></div>
+			<div class="pane-links"><a href="about-us">About Us</a></div>
+			<div class="pane-links"><a href="contact">Contact</a></div>
+			<div class="pane-links"><a href="about-us">Log in</a></div>
+			<div class="pane-links"><a href="contact">Register</a></div>
+		</div>
+	</div>
+	<header class="navbar">
+		<img class="logo" src="images\dbugger-logo-color.png" alt="">
+		<ul>
+			<div class="nav-opt">
+				<div><a href="" style="font-weight: 700;">Home</a></div>
+				<div><a href="courses">Courses</a></div>
+				<div><a href="about-us">About Us</a></div>
+				<div><a href="contact">Contact</a></div>
+			</div>
+
+			<div class="log-in">
+				<p>Log in</p>
+			</div>
+			<div class="register">
+				<p>Register</p>
+			</div>
+		</ul>
+		<div class="menu-toggle" id="mobile-menu" onclick="callSlidePane()">
+			<span class="bar"></span>
+			<span class="bar"></span>
+			<span class="bar"></span>
+		</div>
+
+	</header>
+	<section class="main-section">
+		<div class="hero-section">
+			<div class="col-1">
+				<div class="begin">Let's Begin</div>
+				<div class="right-course">Here's the<br />right <span style="color: orangered;">course</span> for<br />you</div>
+				<div class="sub-text">Need help starting your Coding Journey? Look no further. Join our Coding Community
+					to recieve Premium Coding Content along with Personal Guidance from your mentors.</div>
+				<div class="hero-register">
+					<a href=""><button class="reg-btn"><p>Register</p></button></a>
+				</div>
+				<div class="hero-register1">
+					<img height="30px" src="images\video-play-256.png" alt=""><p>Play Video</p>
+				</div>
+				
+				
+			</div>
+			<div class="col-2">
+				<div class="hero-img">
+					<img src="https://i.pinimg.com/originals/bb/37/5c/bb375cdd655184ca2715ac5059e73651.gif">
+				</div>
+			</div>
+		</div>
+	</section>
+	<div class="trailercontainer active">
+		<iframe src="https://drive.google.com/file/d/1HUIy5dHYfVOGue-IG39B_tgTAU63HiRz/preview" width="90%" height="300" allow="autoplay"></iframe>
+		
+		<i class="fas fa-times fa-2x close-icon"></i>
+	</div>
+	<hr>
+	<section class="weprovide-section">
+       <div>
+		<p class="we-provide">WHAT WE PROVIDE</p>
+		<p class="get">Get the  Best<br>Content From Us</p>
+		<p class="get-para">Stay connected with your mentors, along with the best content curated for you.</p>
+	   </div>
+	   <div class="card-section">
+		<div class="card1">
+			<img src="images\icons8-person-90.png" alt="">
+			<h3>Professional Teacher</h3>
+			<p></p>
+		</div>
+		<div class="card2">c2</div>
+		<div class="card3">c3</div>
+	   </div>
+	</section>
+	<script src="script.js"></script>
+</body>
+
+</html>
