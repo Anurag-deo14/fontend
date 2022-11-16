@@ -1,0 +1,623 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+
+    font-family: sans-serif;
+    letter-spacing: 1px;
+    font-weight: 300;
+}
+body{
+    overflow-x: hidden;
+}
+nav{
+    height: 6rem;
+    width: 100vw;
+    background-color: white;
+    box-shadow: 0 3px 20px rgba(0, 0, 0, 0.2);
+    display: flex;
+    position: fixed;
+    z-index: 10;
+}
+
+/*Styling logo*/
+.logo{
+    padding:1vh 2.0vw;
+    text-align: center;
+}
+.logo img {
+	margin-top: 13px;
+    height: 3.4rem;
+
+}
+
+/*Styling Links*/
+.nav-links{
+    display: flex;
+    list-style: none; 
+    width: 88vw;
+    padding: 0 0.7vw;
+    justify-content: space-evenly;
+    align-items: center;
+    
+}
+.nav-links li a{
+    text-decoration: none;
+	font-family: "Poppins";
+    margin: 0 0.7vw;
+	font-size: 1.3rem;
+	color: black;
+}
+.nav-links li a:hover {
+    color: orangered;
+}
+.nav-links li {
+    position: relative;
+}
+
+.nav-links li a:hover::before{
+    width: 80%;
+}
+
+/*Styling Buttons*/
+.login-button{
+    background-color: transparent;
+    border: 2.5px solid orangered;
+	color: orangered;
+	font-weight: 700;
+	font-family: "Inter";
+    border-radius: 0.6em;
+    padding: 0.7rem 2.4rem;
+    margin-left: 1vw;
+    font-size: 1.2rem;
+    cursor: pointer;
+
+}
+.login-button:hover {
+    color: white;
+    background-color: orangered;
+    border:2.5px solid orangered;
+    transition: all ease-in-out 350ms;
+}
+.join-button{
+    color: white;
+	font-weight: 700;
+	font-size: 1.2rem;
+	font-family: "Inter";
+    background-color: orangered;
+    border: 2.5px solid orangered;
+    border-radius: 0.6em;
+    padding: 0.65rem 1.4rem;
+    cursor: pointer;
+}
+.join-button:hover {
+    color: orangered;
+    background-color: transparent;
+    border:2.5px solid orangered;
+    transition: all ease-in-out 350ms;
+}
+
+/*Styling Hamburger Icon*/
+.hamburger div{
+    width: 30px;
+    height:3px;
+    background: black;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+.hamburger{
+    display: none;
+}
+
+/*Stying for small screens*/
+@media screen and (max-width: 1000px){
+    nav{
+        position: fixed;
+        z-index: 3;
+    }
+    .hamburger{
+        display:block;
+        position: absolute;
+        cursor: pointer;
+        right: 5%;
+        top: 50%;
+        transform: translate(-5%, -50%);
+        z-index: 2;
+        transition: all 0.7s ease;
+    }
+    .nav-links{
+        position: fixed;
+        background: rgb(240, 240, 240);
+        height: 100vh;
+        width: 100%;
+        flex-direction: column;
+        clip-path: circle(50px at 90% -20%);
+        -webkit-clip-path: circle(50px at 90% -10%);
+        transition: all 1s ease-out;
+        pointer-events: none;
+    }
+    .nav-links.open{
+        clip-path: circle(1000px at 90% -10%);
+        -webkit-clip-path: circle(1000px at 90% -10%);
+        pointer-events: all;
+    }
+    .nav-links li{
+        opacity: 0;
+    }
+    .nav-links li:nth-child(1){
+        transition: all 0.5s ease 0.2s;
+    }
+    .nav-links li:nth-child(2){
+        transition: all 0.5s ease 0.4s;
+    }
+    .nav-links li:nth-child(3){
+        transition: all 0.5s ease 0.6s;
+    }
+    .nav-links li:nth-child(4){
+        transition: all 0.5s ease 0.7s;
+    }
+    .nav-links li:nth-child(5){
+        transition: all 0.5s ease 0.8s;
+    }
+    .nav-links li:nth-child(6){
+        transition: all 0.5s ease 0.9s;
+        margin: 0;
+    }
+    .nav-links li:nth-child(7){
+        transition: all 0.5s ease 1s;
+        margin: 0;
+    }
+    li.fade{
+        opacity: 1;
+    }
+}
+/*Animating Hamburger Icon on Click*/
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line2{
+    transition: all 0.7s ease;
+    width:0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px,-6px);
+}
+/* main section */
+.main-sec{
+    
+	display: flex;
+	width: 100%;
+	height: 100vh;
+	flex-direction: row;
+    
+}
+.beg{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    background-color:#F5F5F5;
+}
+.beg p{
+    font-family: "Inter";
+    font-style: Mixed;
+    font-size: 18px;
+    color: orangered;
+    margin-left: 10%;
+    margin-top: 5%;
+
+}
+.right-crc{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    background-color: #F5F5F5;
+    height: 35vh;
+}
+.right-crc p{
+    font-family: "Poppins";
+font-weight:600;
+color: black;
+font-size: 38px;
+line-height: 42px;
+margin-left: 10%;
+}
+.para{
+    display: flex;
+    justify-content: left;
+
+    background-color: #F5F5F5;
+}
+.para p{
+    font-family: "Poppins";
+font-style: Regular;
+font-size: 14px;
+left: 27px;
+line-height: 25px;
+color:#969696;
+margin-left: 10%;
+}
+.main-content-sec{
+  width: 50%;
+}
+.main-img-sec{
+	width: 50%;
+    background-color: #F5F5F5;
+}
+.main-img-sec{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    
+}
+.buttons{
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  background-color: #F5F5F5;
+  height: 28.5vh;
+}
+.reg{
+    margin-left: 10%;
+}
+.buttons button{
+    color: white;
+	font-weight: 700;
+	font-size: 1.2rem;
+	font-family: "Inter";
+    background-color: orangered;
+    border: 2.5px solid orangered;
+    border-radius: 0.6em;
+    padding: 0.65rem 1.4rem;
+    cursor: pointer;
+   
+}
+.play-video{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 50px;
+}
+.play-video p{
+    margin-left: 10px;
+    font-family: "Inter";
+font-weight: 600;
+font-size: 17px;
+color: white;
+}
+.main-img-sec img{
+    height: 350px;
+    margin-left: 4%;
+}
+@media screen and (max-width: 1000px){
+    .main-sec{
+    
+        display: flex;
+        width: 100%;
+        height: 100vh;
+        flex-direction: row;
+        
+    }
+    .beg{
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        background-color:#F5F5F5;
+    }
+    .beg p{
+        font-family: "Inter";
+        font-style: Mixed;
+        font-size: 14px;
+        color: orangered;
+        margin-left: 10%;
+        margin-top: 15%;
+    
+    }
+    .right-crc{
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        background-color: #F5F5F5;
+        height: 35vh;
+    }
+    .right-crc p{
+        font-family: "Poppins";
+    font-weight:600;
+    color: black;
+    font-size: 28px;
+    line-height: 32px;
+    margin-left: 10%;
+    }
+    .para{
+        display: flex;
+        justify-content: left;
+    
+        background-color: #F5F5F5;
+    }
+    .para p{
+        font-family: "Poppins";
+    font-style: Regular;
+    font-size: 10px;
+    
+    line-height: 20px;
+    color:#969696;
+    margin-left: 10%;
+    }
+    .main-content-sec{
+      width: 50%;
+    }
+    .main-img-sec{
+        width: 50%;
+        background-color: #F5F5F5;
+    }
+    .main-img-sec{
+        display: flex;
+        align-items: center;
+        justify-content: left;
+    }
+    .buttons{
+      display: flex;
+      align-items: center;
+      justify-content: left;
+      background-color: #F5F5F5;
+      height: 28.5vh;
+    }
+    .reg{
+        margin-left: 10%;
+    }
+    .buttons button{
+        color: white;
+        font-weight: 700;
+        font-size: 0.8em;
+        font-family: "Inter";
+        background-color: orangered;
+        border: 2.2px solid orangered;
+        border-radius: 0.6em;
+        padding: 0.6rem 1.4rem;
+        cursor: pointer;
+       
+    }
+    .play-video{
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        margin-left: 50px;
+    }
+    .play-video p{
+        margin-left: 10px;
+        font-family: "Inter";
+    font-weight: 600;
+    font-size: 14px;
+    color: white;
+    }
+    .play-video img{
+        height: 20px;
+    }
+    .main-img-sec img{
+        height: 250px;
+    }
+}
+@media screen and (max-width: 900px){
+.main-img-sec img{
+    height: 250px;
+}
+}
+@media screen and (max-width: 750px){
+.main-img-sec img{
+    height: 200px;
+}
+}
+@media screen and (max-width: 600px){
+.main-img-sec img{
+    height: 180px;
+}
+
+.buttons button{
+    color: white;
+    font-weight: 700;
+    font-size: 0.5em;
+    font-family: "Inter";
+    background-color: orangered;
+    border: 1px solid orangered;
+    border-radius: 0.4em;
+    padding: 0.4rem 0.6rem;
+    cursor: pointer;
+   
+}
+.play-video{
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-left: 20px;
+}
+.play-video img{
+    height: 15px;
+}
+.play-video p{
+    margin-left: 7px;
+    font-family: "Inter";
+font-weight: 600;
+font-size: 10px;
+color: white;
+}
+}
+@media screen and (max-width: 500px){
+.main-img-sec img{
+    height: 150px;
+}
+}
+@media screen and (max-width: 400px){
+.main-img-sec img{
+    height: 125px;
+}
+}
+/* video trailer */
+.active.trailercontainer{
+    visibility: hidden;
+}
+.trailercontainer{
+  position:relative;
+  left:49%;
+  transform: translateX(-50%);
+ 
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.trailercontainer iframe{
+  position: fixed;
+  width: 250px;
+  height: 200px;
+  outline: none;
+  margin-bottom: 280px;
+
+}
+.close-icon{
+  position:absolute;
+  margin-bottom: 550px;
+  right:7%;
+  color: white;
+  cursor: pointer;
+}
+.active2{
+  filter: blur(5px) brightness(.7);
+}
+@media (min-width: 420px){
+	.trailercontainer iframe{
+		position: fixed;
+		width: 250px;
+		height: 200px;
+		outline: none;
+		margin-bottom: 300px;
+	  
+	  }
+	  .close-icon{
+		position:absolute;
+		margin-bottom: 550px;
+		right:7%;
+		color: white;
+		cursor: pointer;
+	  }
+  }
+@media (min-width: 581px){
+	.trailercontainer iframe{
+		position: fixed;
+		width: 350px;
+		height: 300px;
+	   outline: none;
+	  margin-bottom: 300px;
+	  
+	  }
+	.close-icon{
+	  position:absolute;
+	  margin-bottom: 600px;
+	  right:12%;
+	  color: white;
+	  cursor: pointer;
+	}
+  }
+@media (min-width: 651px){
+	.trailercontainer iframe{
+		position: fixed;
+		width: 350px;
+		height: 300px;
+	   outline: none;
+	  margin-bottom: 400px;
+	  
+	  }
+	.close-icon{
+	  position:absolute;
+	  margin-bottom: 800px;
+	  right:12%;
+	  color: white;
+	  cursor: pointer;
+	}
+  }
+@media (min-width: 651px){
+	.trailercontainer iframe{
+		position: fixed;
+		width: 350px;
+		height: 300px;
+	   outline: none;
+	  margin-bottom: 400px;
+	  
+	  }
+	.close-icon{
+	  position:absolute;
+	  margin-bottom: 800px;
+	  right:12%;
+	  color: white;
+	  cursor: pointer;
+	}
+  }
+  @media (min-width: 800px){
+	.trailercontainer iframe{
+	  position: fixed;
+	  width: 450px;
+	  height: 300px;
+	 outline: none;
+	margin-bottom: 400px;
+	
+	}
+	.close-icon{
+	  position:absolute;
+	  margin-bottom: 800px;
+	  right: 10%;
+	color: white;
+	  cursor: pointer;
+	}
+  }
+  @media (min-width: 950px){
+	.trailercontainer iframe{
+	  position: fixed;
+	  width: 450px;
+	  height: 300px;
+	 outline: none;
+	margin-bottom: 450px;
+	
+	}
+	.close-icon{
+	  position:absolute;
+	  margin-bottom: 850px;
+	  right: 15%;
+	color: white;
+	  cursor: pointer;
+	}
+  }
+  @media (min-width: 1000px){
+	.trailercontainer iframe{
+	  position: fixed;
+	  width: 500px;
+	  height: 350px;
+	 outline: none;
+	margin-bottom: 450px;
+	
+	}
+	.close-icon{
+	  position:absolute;
+	  margin-bottom: 850px;
+	  right: 20%;
+	color:white;
+	  cursor: pointer;
+	}
+  }
+
+  @media (min-width: 1100px){
+	.trailercontainer iframe{
+	  position: fixed;
+	  width: 550px;
+	  height: 400px;
+	 outline: none;
+	margin-bottom: 450px;
+	
+	}
+	.close-icon{
+	  position:absolute;
+	  margin-bottom: 900px;
+	  right: 24%;
+	color: white;
+	  cursor: pointer;
+	}
+  }
